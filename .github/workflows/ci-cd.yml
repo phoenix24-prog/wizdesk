@@ -28,3 +28,11 @@ jobs:
       - name: Deploy to Kubernetes
         run: |
           # Add your Kubernetes deployment command here
+        
+      - name: Publish Docker image
+        run: |
+          # Add your Docker push command here
+          echo ${{ secrets. }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+          docker push your-docker-image-name
+      
+
