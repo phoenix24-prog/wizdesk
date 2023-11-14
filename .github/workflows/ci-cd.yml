@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          # Add your build and test commands here
+
+      - name: Build Docker image
+        run: |
+          # Add your Docker build command here
+
+      - name: Publish Docker image
+        run: |
+          # Add your Docker push command here
+
+      - name: Deploy to Kubernetes
+        run: |
+          # Add your Kubernetes deployment command here
