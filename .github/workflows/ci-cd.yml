@@ -24,15 +24,13 @@ jobs:
       - name: Publish Docker image
         run: |
           # Add your Docker push command here
+          echo ${{ secrets.Shetty10 }} | docker login -u ${{ secrets.shwethashetty421 }} --password-stdin
+          docker push your-docker-image-name
 
       - name: Deploy to Kubernetes
         run: |
           # Add your Kubernetes deployment command here
         
-      - name: Publish Docker image
-        run: |
-          # Add your Docker push command here
-          echo ${{ secrets.Shetty10 }} | docker login -u ${{ secrets.shwethashetty421 }} --password-stdin
-          docker push your-docker-image-name
+      
       
 
